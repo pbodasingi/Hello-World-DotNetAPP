@@ -1,0 +1,16 @@
+apiVersion : apps/v1beta1
+kind: Deployment
+metadata:
+  name: pbodasingihelloworlddotnetapp 
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: pbodasingihelloworlddotnetapp 
+    spec:
+      containers:
+        - name: pbodasingihelloworlddotnetapp 
+          image: aksimageregistry.azurecr.io/pbodasingihelloworlddotnetapp
+          ports:
+          - containerPort: 80
